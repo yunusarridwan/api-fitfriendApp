@@ -16,10 +16,10 @@ const port = process.env.PORT || 8080;
 
 // get data user login
 app.put('/user', getResponseAuth, saveDataUser, (req, res) => {
-	const { uid, userEmail, userName, _id } = req.user;
+	const { uid, userEmail, userName } = req.user;
 	res
 		.status(200)
-		.json({ status: 'success', data: { uid, userEmail, userName, _id } });
+		.json({ status: 'success', data: { uid, userEmail, userName } });
 });
 
 // change data user
@@ -27,7 +27,7 @@ app.put('/user/updateUser', getResponseAuth, (req, res) => {
 	try {
 		const { uid, email, name, data } = req.body;
 		User.updateOne(
-			{ _id: req.body._id },
+			{ _id: req.user._id },
 			{
 				$set: {
 					name: name,
