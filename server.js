@@ -15,7 +15,7 @@ const app = express();
 const port = process.env.PORT || 8080;
 
 // get data user login
-app.get('/user', getResponseAuth, saveDataUser, (req, res) => {
+app.put('/user', getResponseAuth, saveDataUser, (req, res) => {
 	const { uid, userEmail, userName, _id } = req.user;
 	res
 		.status(200)
