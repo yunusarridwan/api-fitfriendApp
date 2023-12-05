@@ -9,7 +9,7 @@ Follow these steps to set up and run the API:
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone [https://github.com/your-username/api-repository.git](https://github.com/yunusarridwan/fitfriend-api.git)
+   git clone https://github.com/yunusarridwan/fitfriend-api.git
    ```
 
 2. Navigate to the project directory:
