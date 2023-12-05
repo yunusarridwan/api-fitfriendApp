@@ -9,13 +9,13 @@ Follow these steps to set up and run the API:
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/your-username/api-repository.git
+   git clone [https://github.com/your-username/api-repository.git](https://github.com/yunusarridwan/fitfriend-api.git)
    ```
 
 2. Navigate to the project directory:
 
    ```bash
-   cd api-repository
+   cd fitfriend-api
    ```
 
 3. Install the required dependencies:
@@ -28,10 +28,8 @@ Follow these steps to set up and run the API:
 
    ```
    PORT=8080
-   MONGODB_URI=your_mongodb_connection_string
+   MONGODB_URI=mongodb://fitfriend:fitfriend123@clusterproject-shard-00-00.rqlvg.mongodb.net:27017,clusterproject-shard-00-01.rqlvg.mongodb.net:27017,clusterproject-shard-00-02.rqlvg.mongodb.net:27017/fitfriend?replicaSet=atlas-t63wbg-shard-0&ssl=true&authSource=admin
    ```
-
-   Make sure to replace `your_mongodb_connection_string` with your actual MongoDB connection string.
 
 5. Start the server:
 
@@ -39,7 +37,7 @@ Follow these steps to set up and run the API:
    npm start
    ```
 
-   The API will be accessible at `http://localhost:8080`.
+   The API will be accessible at `https://fitfriend-api-lgc5c6xm5a-as.a.run.app:8080`.
 
 ## Endpoints
 
