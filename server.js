@@ -1,6 +1,5 @@
 const express = require('express');
 const multer = require('multer');
-const fetch = require('node-fetch');
 
 // middlewares
 const { getResponseAuth } = require('./middlewares/userAuth');
@@ -20,7 +19,7 @@ const upload = multer();
 const PORT = process.env.PORT || 8080;
 
 // get data user login
-app.put('/user', getResponseAuth, saveDataUser, (req, res) => {
+app.get('/user', getResponseAuth, saveDataUser, (req, res) => {
 	const { uid, userEmail, userName } = req.user;
 	res
 		.status(200)
