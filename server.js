@@ -17,7 +17,7 @@ const User = require('./model-db/model');
 
 const app = express();
 const upload = multer();
-const port = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8080;
 
 // get data user login
 app.put('/user', getResponseAuth, saveDataUser, (req, res) => {
@@ -65,6 +65,6 @@ app.post(
 	}
 );
 
-app.listen(port, () => {
-	console.log(`app listening on port ${port}`);
+app.listen(PORT, () => {
+	console.log(`app listening on port ${PORT}`);
 });
