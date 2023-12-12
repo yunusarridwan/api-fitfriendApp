@@ -59,30 +59,6 @@ app.post(
 	upload.single('video'),
 	async (req, res) => {
 		if (req.file) {
-			const options = {
-				method: 'POST',
-				body: new FormData().append('video', req.file.buffer, {
-					filename: req.file.originalname,
-					contentType: req.file.mimetype,
-				}),
-			};
-
-			try {
-				const response = await fetch(
-					'<flask-cloud-run-url>/process_video',
-					options
-				);
-				if (response.ok) {
-					console.log('Video berhasil diproses!');
-					res.send('Video berhasil diunggah!');
-				} else {
-					console.log('Terjadi kesalahan saat memproses video.');
-					res.status(400).send('Terjadi kesalahan saat memproses video.');
-				}
-			} catch (error) {
-				console.log('Terjadi kesalahan saat mengirim permintaan.');
-				res.status(400).send('Terjadi kesalahan saat mengirim permintaan.');
-			}
 		} else {
 			res.status(400).send('Terjadi kesalahan saat mengunggah video.');
 		}
